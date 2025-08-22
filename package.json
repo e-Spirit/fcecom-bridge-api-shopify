@@ -1,0 +1,37 @@
+{
+  "name": "fcecom-bridge-api-shopify",
+  "description": "FirstSpirit Connect for Commerce - Shopify",
+  "version": "1.0.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/e-Spirit/fcecom-bridge-api-shopify.git"
+  },
+  "author": "Crownpeak Technology GmbH",
+  "license": "Apache-2.0",
+  "scripts": {
+    "start": "node server.js",
+    "test": "jest --coverage --silent --resetMocks --collectCoverageFrom=src/**/* --collectCoverageFrom=!src/resources/*",
+    "start:watch": "nodemon -L server.js src",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "axios": "^1.7.5",
+    "axios-oauth-client": "^2.2.0",
+    "axios-token-interceptor": "^0.2.0",
+    "dotenv": "^16.4.5",
+    "fcecom-bridge-commons": "^2.4.3"
+  },
+  "devDependencies": {
+    "braces": "~> 3.0.3",
+    "jest": "^29.7.0",
+    "micromatch": "~> 4.0.8",
+    "nodemon": "^3.1.0",
+    "prettier": "^3.2.5"
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/src/utils/testEnvVars.js"
+    ]
+  }
+}
